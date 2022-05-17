@@ -12,6 +12,8 @@ class Node:
 
     # updates the value of the node according to the previous layer and weights
     def forward_prop(self):
+        # fix the thing
+        # make it actually update the node values
         self.value = self.bias + sum([self.activation(n.value) for n in self.network.get_previous_layer(self.layer.index).nodes] * self.weights)
 
     # updates the weights according to the error function
